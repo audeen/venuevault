@@ -122,7 +122,7 @@ export default class CreateVenue extends Component {
     console.log(venue);
 
     axios
-      .post("http://localhost:5000/venues/create", venue)
+      .post("/venues/create", venue)
       .then((res) => console.log(res.data))
       .catch((error) => {
         console.log(error.response);

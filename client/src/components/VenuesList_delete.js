@@ -39,7 +39,7 @@ export default class VenueList_delete extends Component {
 
   componentDidMount() {
     axios
-      .get("http://localhost:5000/venues/")
+      .get("/venues/")
       .then((response) => {
         this.setState({ venues: response.data });
       })
@@ -60,9 +60,7 @@ export default class VenueList_delete extends Component {
     });
   }
   deleteVenue(id) {
-    axios
-      .delete("http://localhost:5000/venues/" + id)
-      .then((res) => console.log(res.data));
+    axios.delete("/venues/" + id).then((res) => console.log(res.data));
 
     this.setState({
       venues: this.state.venues.filter((el) => el._id !== id),

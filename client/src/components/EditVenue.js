@@ -122,10 +122,7 @@ export default class EditVenue extends Component {
     console.log(venue);
 
     axios
-      .post(
-        "http://localhost:5000/venues/update/" + this.props.match.params.id,
-        venue
-      )
+      .post("/venues/update/" + this.props.match.params.id, venue)
       .then((res) => console.log(res.data));
 
     window.location = "/";
@@ -133,7 +130,7 @@ export default class EditVenue extends Component {
 
   componentDidMount() {
     axios
-      .get("http://localhost:5000/venues/" + this.props.match.params.id)
+      .get("/venues/" + this.props.match.params.id)
       .then((response) => {
         this.setState({
           venueName: response.data.venueName,

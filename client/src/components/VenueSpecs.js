@@ -56,7 +56,7 @@ export default class VenueSpecs extends Component {
       showDetails: "specs",
     }); */
     axios
-      .get("http://localhost:5000/venues/" + this.props.match.params.id)
+      .get("/venues/" + this.props.match.params.id)
       .then((response) => {
         this.setState({
           venueName: response.data.venueName,
