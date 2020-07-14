@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-var uniqueValidator = require("mongoose-unique-validator");
 
 const Schema = mongoose.Schema;
 
@@ -45,7 +44,6 @@ const venueSchema = new Schema(
     timestamps: true,
   }
 );
-venueSchema.plugin(uniqueValidator);
 
 const Venue = mongoose.model("Venue", venueSchema);
 
