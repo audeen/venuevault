@@ -128,7 +128,7 @@ export default class CreateVenue extends Component {
         console.log(error.response);
       });
 
-    /*     window.location = "/"; */
+    window.location = "/";
   }
   render() {
     console.log(this.state.currentStep);
