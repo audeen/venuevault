@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { Card, Container, Row, CardDeck, Alert } from "react-bootstrap";
+import { Card, Container, Alert, CardDeck, Spinner } from "react-bootstrap";
 import NavbarHome from "./navigation/NavbarHome";
 
 import axios from "axios";
@@ -9,6 +9,12 @@ const Venue = (props) => (
   <div>
     <Card className="mt-3">
       <Link to={"specs/" + props.venue._id} style={{ textDecoration: "none" }}>
+        {props.venue.cardImage ? (
+          <Card.Img variant="top" src={props.venue.cardImage} fluid />
+        ) : (
+          ""
+        )}
+
         <Card.Body>
           <Card.Title>{props.venue.venueName}</Card.Title>
           <Card.Text>{props.venue.venueStreet}</Card.Text>
@@ -43,7 +49,9 @@ export default class VenueList extends Component {
 
   venueList() {
     if (!this.state.venues.length) {
-      return <Alert variant="danger">Please add a venue to your vault!</Alert>;
+      return (
+        <Alert variant={"primary"}>Please add a venue to your Vault</Alert>
+      );
     } else {
       return this.state.venues.map((currentvenue) => {
         return (
@@ -67,7 +75,7 @@ export default class VenueList extends Component {
     return (
       <React.Fragment>
         <NavbarHome />
-        <Container className="pt-5 mt-2">{this.venueList()}</Container>
+        <Container className="pt-5 mt-4">{this.venueList()}</Container>
       </React.Fragment>
     );
   }

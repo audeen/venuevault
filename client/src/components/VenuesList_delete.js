@@ -72,8 +72,7 @@ export default class VenueList_delete extends Component {
     return (
       <React.Fragment>
         <NavbarDelete />
-
-        {this.venueList()}
+        <Container className="mt-5 pt-4">{this.venueList()}</Container>
       </React.Fragment>
     );
   }

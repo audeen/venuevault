@@ -29,7 +29,6 @@ export class Details extends React.Component {
           <label>Street: </label>
           <input
             type="text"
-            required
             className="form-control"
             name="venueStreet"
             value={this.props.venueStreet}
@@ -40,7 +39,6 @@ export class Details extends React.Component {
           <label>Postal: </label>
           <input
             type="text"
-            required
             className="form-control"
             name="venuePostal"
             value={this.props.venuePostal}
@@ -51,10 +49,20 @@ export class Details extends React.Component {
           <label>City: </label>
           <input
             type="text"
-            required
             className="form-control"
             name="venueCity"
             value={this.props.venueCity}
+            onChange={this.props.handleChange}
+          />
+        </div>
+        <div className="form-group">
+          <label>Venue-Logo: </label>
+          <input
+            type="text"
+            className="form-control"
+            name="cardImage"
+            placeholder="Please provide external image source!"
+            value={this.props.cardImage}
             onChange={this.props.handleChange}
           />
         </div>

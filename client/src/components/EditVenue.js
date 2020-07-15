@@ -23,6 +23,7 @@ export default class EditVenue extends Component {
       venueStreet: "",
       venuePostal: "",
       venueCity: "",
+      cardImage: "",
 
       currentStep: 1,
     };
@@ -106,7 +107,6 @@ export default class EditVenue extends Component {
       loadingPath: this.state.loadingPath,
       storage: this.state.storage,
       parking: this.state.parking,
-      osm: this.state.osm,
 
       stageWidth: this.state.stageWidth,
       stageDepth: this.state.stageDepth,
@@ -116,7 +116,8 @@ export default class EditVenue extends Component {
       availableTech: this.state.availableTech,
 
       stageLeft: this.state.stageLeft,
-      StageRight: this.state.StageRight,
+      stageRight: this.state.stageRight,
+      cardImage: this.state.cardImage,
     };
 
     console.log(venue);
@@ -149,8 +150,6 @@ export default class EditVenue extends Component {
           storage: response.data.storage,
           parking: response.data.parking,
 
-          osm: response.data.osm,
-
           //Stage
           stageWidth: response.data.stageWidth,
           stageDepth: response.data.stageDepth,
@@ -162,9 +161,10 @@ export default class EditVenue extends Component {
 
           //Power
           stageLeft: response.data.stageLeft,
-          StageRight: response.data.StageRight,
+          stageRight: response.data.stageRight,
 
           currentId: response.data._id,
+          cardImage: response.data.cardImage,
         });
       })
       .catch(function (error) {
@@ -184,6 +184,7 @@ export default class EditVenue extends Component {
             venueStreet={this.state.venueStreet}
             venuePostal={this.state.venuePostal}
             venueCity={this.state.venueCity}
+            cardImage={this.state.cardImage}
           />
 
           <Contact
@@ -200,7 +201,6 @@ export default class EditVenue extends Component {
             loadingPath={this.state.loadingPath}
             storage={this.state.storage}
             parking={this.state.parking}
-            osm={this.state.osm}
           />
           <Stage
             currentStep={this.state.currentStep}
@@ -220,7 +220,7 @@ export default class EditVenue extends Component {
             currentStep={this.state.currentStep}
             handleChange={this.handleChange}
             stageLeft={this.state.stageLeft}
-            StageRight={this.state.StageRight}
+            stageRight={this.state.stageRight}
           />
 
           {this.previousButton}

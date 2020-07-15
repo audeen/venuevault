@@ -6,14 +6,12 @@ export default class NavbarCreate extends Component {
   render() {
     return (
       <React.Fragment>
-        <Container className="fixed-top">
-          <Navbar bg="dark" expand="lg">
-            <Link to="/">
-              <i className="fas fa-window-close fa-2x"></i>
-            </Link>
-            <Navbar.Brand>Create New Venue</Navbar.Brand>
-          </Navbar>
-        </Container>
+        <Navbar className="fixed-top py-3 bg-primary justify-content-around">
+          <Link to="/">
+            <i className="fas fa-window-close fa-2x"></i>
+          </Link>
+          <h2 className="mx-auto">Create New Venue</h2>
+        </Navbar>
       </React.Fragment>
     );
   }

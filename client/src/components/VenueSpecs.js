@@ -37,8 +37,6 @@ export default class VenueSpecs extends Component {
       storage: "",
       parking: "",
 
-      osm: "",
-
       //Stage
       stageWidth: "",
       stageDepth: "",
@@ -50,7 +48,7 @@ export default class VenueSpecs extends Component {
 
       //Power
       stageLeft: "",
-      StageRight: "",
+      stageRight: "",
 
       currentId: "",
       showDetails: "",
@@ -78,8 +76,6 @@ export default class VenueSpecs extends Component {
           storage: response.data.storage,
           parking: response.data.parking,
 
-          osm: response.data.osm,
-
           //Stage
           stageWidth: response.data.stageWidth,
           stageDepth: response.data.stageDepth,
@@ -91,7 +87,7 @@ export default class VenueSpecs extends Component {
 
           //Power
           stageLeft: response.data.stageLeft,
-          StageRight: response.data.StageRight,
+          stageRight: response.data.stageRight,
 
           currentId: response.data._id,
         });
@@ -125,18 +121,18 @@ export default class VenueSpecs extends Component {
 
     return (
       <React.Fragment>
-        <Container className="position-sticky">
-          <Navbar bg="dark" expand="lg">
+        <Container className="pb-5">
+          <Navbar className="fixed-top py-1 mb-5 bg-primary justify-content-around">
             <Link to="/">
               <i className="fas fa-arrow-left fa-2x"></i>
             </Link>
 
-            <Navbar.Brand>{this.state.venueName}</Navbar.Brand>
+            <h3>{this.state.venueName}</h3>
             <Link to={"/edit/" + this.state.currentId}>
               <i className="fas fa-edit fa-2x"></i>
             </Link>
           </Navbar>
-          <Navbar bg="dark" expand="lg">
+          <Navbar className="fixed-top py-1 mt-5 mb-5 bg-primary justify-content-around">
             <Container className="mb-2 mt-2">
               <Button
                 onClick={() => {
@@ -172,7 +168,7 @@ export default class VenueSpecs extends Component {
           </Navbar>
         </Container>
         <Container>
-          <CardDeck className="mt-3">{specsToRender()}</CardDeck>
+          <Container className="mt-5 pt-5">{specsToRender()}</Container>
         </Container>
       </React.Fragment>
     );

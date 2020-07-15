@@ -107,7 +107,6 @@ export default class CreateVenue extends Component {
       loadingPath: this.state.loadingPath,
       storage: this.state.storage,
       parking: this.state.parking,
-      osm: this.state.osm,
 
       stageWidth: this.state.stageWidth,
       stageDepth: this.state.stageDepth,
@@ -117,7 +116,7 @@ export default class CreateVenue extends Component {
       availableTech: this.state.availableTech,
 
       stageLeft: this.state.stageLeft,
-      StageRight: this.state.StageRight,
+      stageRight: this.state.stageRight,
     };
 
     console.log(venue);
@@ -137,7 +136,7 @@ export default class CreateVenue extends Component {
     return (
       <div>
         <NavbarCreate />
-        <Container className="mt-5 pt-3">
+        <Container className="mt-5 pt-5">
           <form onSubmit={this.onSubmit}>
             <Details
               currentStep={this.state.currentStep}
@@ -146,6 +145,7 @@ export default class CreateVenue extends Component {
               venueStreet={this.state.venueStreet}
               venuePostal={this.state.venuePostal}
               venueCity={this.state.venueCity}
+              cardImage={this.state.cardImage}
             />
 
             <Contact
@@ -182,7 +182,7 @@ export default class CreateVenue extends Component {
               currentStep={this.state.currentStep}
               handleChange={this.handleChange}
               stageLeft={this.state.stageLeft}
-              StageRight={this.state.StageRight}
+              stageRight={this.state.stageRight}
             />
 
             {this.previousButton}

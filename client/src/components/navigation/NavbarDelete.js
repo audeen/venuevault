@@ -11,12 +11,13 @@ export default class NavbarDelete extends Component {
     return (
       <React.Fragment>
         <Container className="sticky-top">
-          <Navbar bg="dark" expand="lg">
+          <Navbar className="fixed-top py-3 bg-danger justify-content-around">
             <Link to="/">
               <i className="fas fa-window-close fa-2x"></i>
             </Link>
-            <Navbar.Brand>Delete Venues</Navbar.Brand>
+            <h3 style={{ color: "black" }}>Delete Venues</h3>
           </Navbar>
+          <Container />
         </Container>
       </React.Fragment>
     );

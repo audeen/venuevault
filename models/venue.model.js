@@ -25,8 +25,6 @@ const venueSchema = new Schema(
     storage: { type: String, required: false },
     parking: { type: String, required: false },
 
-    osm: { type: String, required: false },
-
     //Stage
     stageWidth: { type: String, required: false },
     stageDepth: { type: String, required: false },
@@ -38,7 +36,9 @@ const venueSchema = new Schema(
 
     //Power
     stageLeft: { type: String, required: false },
-    StageRight: { type: String, required: false },
+    stageRight: { type: String, required: false },
+    // Card-Image
+    cardImage: { type: String, required: false },
   },
   {
     timestamps: true,

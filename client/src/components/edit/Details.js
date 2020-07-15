@@ -1,4 +1,5 @@
 import React from "react";
+import { Container } from "react-bootstrap";
 
 export class Details extends React.Component {
   constructor(props) {
@@ -12,7 +13,7 @@ export class Details extends React.Component {
     }
 
     return (
-      <React.Fragment>
+      <Container className="mt-5 pt-5">
         <div className="form-group">
           <label>Venue-Name: </label>
           <input
@@ -57,7 +58,17 @@ export class Details extends React.Component {
             onChange={this.props.handleChange}
           />
         </div>
-      </React.Fragment>
+        <div className="form-group">
+          <label>Venue-Logo: </label>
+          <input
+            type="text"
+            className="form-control"
+            name="cardImage"
+            value={this.props.cardImage}
+            onChange={this.props.handleChange}
+          />
+        </div>
+      </Container>
     );
   }
 }

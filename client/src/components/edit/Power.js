@@ -1,5 +1,5 @@
 import React from "react";
-import { Form } from "react-bootstrap";
+import { Form, Container } from "react-bootstrap";
 
 export class Power extends React.Component {
   constructor(props) {
@@ -13,7 +13,7 @@ export class Power extends React.Component {
     }
 
     return (
-      <React.Fragment>
+      <Container className="mt-5 pt-5">
         <Form.Group>
           <Form.Label>Stage Left: </Form.Label>
           <Form.Control
@@ -30,9 +30,9 @@ export class Power extends React.Component {
           <Form.Control
             as="textarea"
             rows="3"
-            id="StageRight"
-            name="StageRight"
-            value={this.props.StageRight}
+            id="stageRight"
+            name="stageRight"
+            value={this.props.stageRight}
             onChange={this.props.handleChange}
           />
         </Form.Group>
@@ -40,10 +40,10 @@ export class Power extends React.Component {
           <Form.Control
             type="submit"
             value="Save Venue"
-            className="btn btn-primary"
+            className="btn btn-success"
           />
         </Form.Group>
-      </React.Fragment>
+      </Container>
     );
   }
 }

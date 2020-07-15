@@ -30,9 +30,9 @@ export class Power extends React.Component {
           <Form.Control
             as="textarea"
             rows="3"
-            id="StageRight"
-            name="StageRight"
-            value={this.props.StageRight}
+            id="stageRight"
+            name="stageRight"
+            value={this.props.stageRight}
             onChange={this.props.handleChange}
           />
         </Form.Group>
@@ -40,7 +40,7 @@ export class Power extends React.Component {
           <Form.Control
             type="submit"
             value="Save Venue"
-            className="btn btn-primary"
+            className="btn btn-success"
           />
         </Form.Group>
       </React.Fragment>

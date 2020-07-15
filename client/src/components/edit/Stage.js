@@ -1,4 +1,5 @@
 import React from "react";
+import { Container } from "react-bootstrap";
 
 export class Stage extends React.Component {
   constructor(props) {
@@ -12,7 +13,7 @@ export class Stage extends React.Component {
     }
     console.log(this.props.handleChange);
     return (
-      <React.Fragment>
+      <Container className="mt-5 pt-5">
         <div className="form-group">
           <label>Clear Width: </label>
           <input
@@ -57,7 +58,7 @@ export class Stage extends React.Component {
             onChange={this.props.handleChange}
           />
         </div>
-      </React.Fragment>
+      </Container>
     );
   }
 }

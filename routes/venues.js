@@ -25,8 +25,6 @@ router.route("/create").post((req, res) => {
   const storage = req.body.storage;
   const parking = req.body.parking;
 
-  const osm = req.body.osm;
-
   //Stage
   const stageWidth = req.body.stageWidth;
   const stageDepth = req.body.stageDepth;
@@ -38,14 +36,12 @@ router.route("/create").post((req, res) => {
 
   //Power
   const stageLeft = req.body.stageLeft;
-  const StageRight = req.body.StageRight;
+  const stageRight = req.body.stageRight;
+
+  // Card-Image
+  const cardImage = req.body.cardImage;
 
   const newVenue = new Venue({
-    /*     name,
-    city,
-    details,
-    details2, */
-
     venueName,
     venueStreet,
     venuePostal,
@@ -57,14 +53,15 @@ router.route("/create").post((req, res) => {
     loadingPath,
     storage,
     parking,
-    osm,
+
     stageWidth,
     stageDepth,
     stageHeight,
     stageLevel,
     availableTech,
     stageLeft,
-    StageRight,
+    stageRight,
+    cardImage,
   });
 
   newVenue
@@ -103,8 +100,6 @@ router.route("/update/:id").post((req, res) => {
       venue.storage = req.body.storage;
       venue.parking = req.body.parking;
 
-      venue.osm = req.body.osm;
-
       //Stage
       venue.stageWidth = req.body.stageWidth;
       venue.stageDepth = req.body.stageDepth;
@@ -116,7 +111,8 @@ router.route("/update/:id").post((req, res) => {
 
       //Power
       venue.stageLeft = req.body.stageLeft;
-      venue.StageRight = req.body.StageRight;
+      venue.stageRight = req.body.stageRight;
+      venue.cardImage = req.body.cardImage;
 
       venue
         .save()

@@ -1,5 +1,5 @@
 import React from "react";
-import { Form } from "react-bootstrap";
+import { Form, Container } from "react-bootstrap";
 
 export class Tech extends React.Component {
   constructor(props) {
@@ -13,7 +13,7 @@ export class Tech extends React.Component {
     }
     console.log(this.props.currentStep);
     return (
-      <React.Fragment>
+      <Container className="mt-5 pt-5">
         <Form.Group>
           <Form.Label>Available Tech: </Form.Label>
           <Form.Control
@@ -25,7 +25,7 @@ export class Tech extends React.Component {
             onChange={this.props.handleChange}
           />
         </Form.Group>
-      </React.Fragment>
+      </Container>
     );
   }
 }

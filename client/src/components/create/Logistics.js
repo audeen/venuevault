@@ -46,17 +46,6 @@ export class Logistics extends React.Component {
             onChange={this.props.handleChange}
           />
         </div>
-        <div className="form-group">
-          <label>OSM-Code: </label>
-          <input
-            type="text"
-            className="form-control"
-            id="osm"
-            name="osm"
-            value={this.props.osm}
-            onChange={this.props.handleChange}
-          />
-        </div>
       </React.Fragment>
     );
   }

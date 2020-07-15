@@ -8,7 +8,7 @@ export default function VenuePower(data) {
       <ListGroup variant="flush">
         <Card.Header>Power</Card.Header>
         <ListGroup.Item>Stage Left: {venue.stageLeft}</ListGroup.Item>
-        <ListGroup.Item>Stage Right: {venue.StageRight}</ListGroup.Item>
+        <ListGroup.Item>Stage Right: {venue.stageRight}</ListGroup.Item>
       </ListGroup>
     </Card>
   );
