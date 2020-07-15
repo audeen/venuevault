@@ -1,3 +1,5 @@
+// Component for displaying all Venues on the Landing-Page
+
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Card, Container, Alert, CardDeck, Spinner } from "react-bootstrap";

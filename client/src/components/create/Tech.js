@@ -1,3 +1,5 @@
+// Part of the Multi-Step-Form for creating a new Venue, responsible for Tech
+
 import React from "react";
 import { Form } from "react-bootstrap";
 

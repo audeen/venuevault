@@ -1,3 +1,5 @@
+// HTTP-Routes for the Venue-Model-Schema
+
 const router = require("express").Router();
 let Venue = require("../models/venue.model");
 

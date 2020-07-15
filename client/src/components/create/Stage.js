@@ -1,3 +1,5 @@
+// Part of the Multi-Step-Form for creating a new Venue, responsible for Stage
+
 import React from "react";
 
 export class Stage extends React.Component {

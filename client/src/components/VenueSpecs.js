@@ -1,3 +1,5 @@
+// Component for displaying the specs of a Venue
+
 import React, { Component } from "react";
 import axios from "axios";
 import {

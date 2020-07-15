@@ -1,3 +1,5 @@
+// Part of the Multi-Step-Form for creating a new Venue, responsible for Details
+
 import React from "react";
 
 export class Details extends React.Component {

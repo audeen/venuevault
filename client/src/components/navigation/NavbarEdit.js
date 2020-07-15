@@ -1,3 +1,5 @@
+//Navbar for editing a venue
+
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Navbar, Button } from "react-bootstrap";

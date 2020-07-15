@@ -1,3 +1,5 @@
+// Component for editing a Venue
+
 import React, { Component } from "react";
 import axios from "axios";
 import Details from "./edit/Details";

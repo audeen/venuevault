@@ -1,3 +1,5 @@
+//Component for displaying Tech-Data on the VenueSpecs-Component
+
 import React from "react";
 import { Card, ListGroup } from "react-bootstrap";
 

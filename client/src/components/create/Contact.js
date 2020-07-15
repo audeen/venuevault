@@ -1,3 +1,5 @@
+// Part of the Multi-Step-Form for creating a new Venue, responsible for Contact
+
 import React from "react";
 
 export class Contact extends React.Component {

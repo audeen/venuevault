@@ -1,3 +1,5 @@
+// Part of the Multi-Step-Form for creating a new Venue, responsible for Logistics
+
 import React from "react";
 
 export class Logistics extends React.Component {

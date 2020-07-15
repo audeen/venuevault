@@ -1,3 +1,5 @@
+// Component for displaying the delete-button on every Venue on the landing page
+
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Container, Card, Button, Row, Col, CardDeck } from "react-bootstrap";
