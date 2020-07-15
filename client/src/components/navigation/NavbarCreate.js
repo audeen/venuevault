@@ -2,7 +2,7 @@
 
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { Navbar, Container } from "react-bootstrap";
+import { Navbar } from "react-bootstrap";
 
 export default class NavbarCreate extends Component {
   render() {

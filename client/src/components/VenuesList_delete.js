@@ -2,7 +2,7 @@
 
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { Container, Card, Button, Row, Col, CardDeck } from "react-bootstrap";
+import { Container, Card, Button, Col } from "react-bootstrap";
 import NavbarDelete from "./navigation/NavbarDelete";
 import axios from "axios";
 

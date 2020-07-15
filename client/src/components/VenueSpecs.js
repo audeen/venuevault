@@ -2,13 +2,7 @@
 
 import React, { Component } from "react";
 import axios from "axios";
-import {
-  Navbar,
-  Button,
-  Container,
-  CardDeck,
-  ButtonGroup,
-} from "react-bootstrap";
+import { Navbar, Button, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import VenueDetails from "./venueSpecs/VenueDetails";
 import VenueStage from "./venueSpecs/VenueStage";
