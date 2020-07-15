@@ -7,7 +7,7 @@ export default function VenueTech(data) {
     <Card>
       <ListGroup variant="flush">
         <Card.Header>Available Tech</Card.Header>
-        <input className="textarea">{venue.availableTech}</input>
+        <ListGroup.Item>{venue.availableTech}</ListGroup.Item>
       </ListGroup>
     </Card>
   );
