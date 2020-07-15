@@ -17,7 +17,7 @@ export class Stage extends React.Component {
         <div className="form-group">
           <label>Clear Width: </label>
           <input
-            type="number"
+            type="text"
             className="form-control"
             id="stageWidth"
             name="stageWidth"
@@ -28,7 +28,7 @@ export class Stage extends React.Component {
         <div className="form-group">
           <label>Clear Depth: </label>
           <input
-            type="number"
+            type="text"
             className="form-control"
             id="stageDepth"
             name="stageDepth"
@@ -39,7 +39,7 @@ export class Stage extends React.Component {
         <div className="form-group">
           <label>Clear Height: </label>
           <input
-            type="number"
+            type="text"
             className="form-control"
             id="stageHeight"
             name="stageHeight"
@@ -50,7 +50,7 @@ export class Stage extends React.Component {
         <div className="form-group">
           <label>Stage-Level: </label>
           <input
-            type="number"
+            type="text"
             className="form-control"
             id="stageLevel"
             name="stageLevel"
