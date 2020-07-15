@@ -1,29 +1,31 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { Card } from "react-bootstrap";
+import { Container, Card, Button, Row, Col, CardDeck } from "react-bootstrap";
 import NavbarDelete from "./navigation/NavbarDelete";
 import axios from "axios";
 
 const Venue = (props) => (
-  <div>
-    <Card>
+  <Col>
+    <Card className="mt-2">
       <Link to={"specs/" + props.venue._id} style={{ textDecoration: "none" }}>
-        <Card.Img variant="top" src="holder.js/100px180" />
         <Card.Body>
           <Card.Title>{props.venue.venueName}</Card.Title>
           <Card.Text>{props.venue.venueCity}</Card.Text>
         </Card.Body>
       </Link>
-      <button
-        href="#"
-        onClick={() => {
-          props.deleteVenue(props.venue._id);
-        }}
-      >
-        Delete {props.venue.venueName}
-      </button>
+      <Container>
+        <Button
+          className="btn-block mb-2"
+          variant="danger"
+          onClick={() => {
+            props.deleteVenue(props.venue._id);
+          }}
+        >
+          Delete {props.venue.venueName}
+        </Button>
+      </Container>
     </Card>
-  </div>
+  </Col>
 );
 
 export default class VenueList_delete extends Component {
@@ -68,10 +70,11 @@ export default class VenueList_delete extends Component {
   }
   render() {
     return (
-      <div>
+      <React.Fragment>
         <NavbarDelete />
+
         {this.venueList()}
-      </div>
+      </React.Fragment>
     );
   }
 }

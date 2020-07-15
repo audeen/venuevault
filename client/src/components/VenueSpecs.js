@@ -1,6 +1,12 @@
 import React, { Component } from "react";
 import axios from "axios";
-import { Navbar } from "react-bootstrap";
+import {
+  Navbar,
+  Button,
+  Container,
+  CardDeck,
+  ButtonGroup,
+} from "react-bootstrap";
 import { Link } from "react-router-dom";
 import VenueDetails from "./venueSpecs/VenueDetails";
 import VenueStage from "./venueSpecs/VenueStage";
@@ -52,9 +58,6 @@ export default class VenueSpecs extends Component {
   }
 
   componentDidMount() {
-    /*     this.setState({
-      showDetails: "specs",
-    }); */
     axios
       .get("/venues/" + this.props.match.params.id)
       .then((response) => {
@@ -122,52 +125,55 @@ export default class VenueSpecs extends Component {
 
     return (
       <React.Fragment>
-        <Navbar bg="dark" expand="lg">
-          <Link to="/">
-            <i className="fas fa-arrow-left fa-2x"></i>
-          </Link>
+        <Container className="position-sticky">
+          <Navbar bg="dark" expand="lg">
+            <Link to="/">
+              <i className="fas fa-arrow-left fa-2x"></i>
+            </Link>
 
-          <Navbar.Brand>{this.state.venueName}</Navbar.Brand>
-          <Link to={"/edit/" + this.state.currentId}>
-            <i className="fas fa-edit fa-2x"></i>
-          </Link>
-        </Navbar>
-        <Navbar bg="dark" expand="lg">
-          <div>
-            <button
-              onClick={() => {
-                this.handleSpecs("details");
-              }}
-            >
-              Details
-            </button>
+            <Navbar.Brand>{this.state.venueName}</Navbar.Brand>
+            <Link to={"/edit/" + this.state.currentId}>
+              <i className="fas fa-edit fa-2x"></i>
+            </Link>
+          </Navbar>
+          <Navbar bg="dark" expand="lg">
+            <Container className="mb-2 mt-2">
+              <Button
+                onClick={() => {
+                  this.handleSpecs("details");
+                }}
+              >
+                Details
+              </Button>
 
-            <button
-              onClick={() => {
-                this.handleSpecs("stage");
-              }}
-            >
-              Stage
-            </button>
+              <Button
+                onClick={() => {
+                  this.handleSpecs("stage");
+                }}
+              >
+                Stage
+              </Button>
 
-            <button
-              onClick={() => {
-                this.handleSpecs("tech");
-              }}
-            >
-              Tech
-            </button>
-            <button
-              onClick={() => {
-                this.handleSpecs("power");
-              }}
-            >
-              Power
-            </button>
-          </div>
-        </Navbar>
-
-        <React.Fragment>{specsToRender()}</React.Fragment>
+              <Button
+                onClick={() => {
+                  this.handleSpecs("tech");
+                }}
+              >
+                Tech
+              </Button>
+              <Button
+                onClick={() => {
+                  this.handleSpecs("power");
+                }}
+              >
+                Power
+              </Button>
+            </Container>
+          </Navbar>
+        </Container>
+        <Container>
+          <CardDeck className="mt-3">{specsToRender()}</CardDeck>
+        </Container>
       </React.Fragment>
     );
   }

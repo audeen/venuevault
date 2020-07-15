@@ -1,6 +1,5 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.min.css";
 
 import VenuesList from "./components/VenuesList";
 import VenuesList_delete from "./components/VenuesList_delete";

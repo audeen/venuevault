@@ -27,9 +27,6 @@ export default function VenueDetails(data) {
         <ListGroup.Item>Storage: {venue.storage}</ListGroup.Item>
         <ListGroup.Item>Parking: {venue.parking}</ListGroup.Item>
       </ListGroup>
-      <ListGroup variant="flush">
-        <ListGroup.Item>KartenDaten: {venue.osm}</ListGroup.Item>
-      </ListGroup>
     </Card>
   );
 }

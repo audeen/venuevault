@@ -1,17 +1,17 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { Card, Alert } from "react-bootstrap";
+import { Card, Container, Row, CardDeck, Alert } from "react-bootstrap";
 import NavbarHome from "./navigation/NavbarHome";
 
 import axios from "axios";
 
 const Venue = (props) => (
   <div>
-    <Card>
+    <Card className="mt-3">
       <Link to={"specs/" + props.venue._id} style={{ textDecoration: "none" }}>
-        <Card.Img variant="top" src="holder.js/100px180" />
         <Card.Body>
           <Card.Title>{props.venue.venueName}</Card.Title>
+          <Card.Text>{props.venue.venueStreet}</Card.Text>
           <Card.Text>{props.venue.venueCity}</Card.Text>
         </Card.Body>
       </Link>
@@ -65,10 +65,10 @@ export default class VenueList extends Component {
   }
   render() {
     return (
-      <div>
+      <React.Fragment>
         <NavbarHome />
-        {this.venueList()}
-      </div>
+        <Container className="pt-5 mt-2">{this.venueList()}</Container>
+      </React.Fragment>
     );
   }
 }

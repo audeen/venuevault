@@ -18,7 +18,7 @@ export class Tech extends React.Component {
           <Form.Label>Available Tech: </Form.Label>
           <Form.Control
             as="textarea"
-            rows="3"
+            rows="10"
             id="availableTech"
             name="availableTech"
             value={this.props.availableTech}

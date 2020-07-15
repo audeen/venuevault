@@ -1,4 +1,5 @@
 import React from "react";
+import { Form } from "react-bootstrap";
 
 export class Logistics extends React.Component {
   constructor(props) {
@@ -13,17 +14,18 @@ export class Logistics extends React.Component {
     console.log(this.props.handleChange);
     return (
       <React.Fragment>
-        <div className="form-group">
-          <label>Loading Path: </label>
-          <input
-            type="text"
-            className="form-control"
+        <Form.Group>
+          <Form.Label>Loading Path: </Form.Label>
+          <Form.Control
+            as="textarea"
+            rows="3"
             id="loadingPath"
             name="loadingPath"
             value={this.props.loadingPath}
             onChange={this.props.handleChange}
           />
-        </div>
+        </Form.Group>
+
         <div className="form-group">
           <label>Storage: </label>
           <input
@@ -43,17 +45,6 @@ export class Logistics extends React.Component {
             id="parking"
             name="parking"
             value={this.props.parking}
-            onChange={this.props.handleChange}
-          />
-        </div>
-        <div className="form-group">
-          <label>OSM-Code: </label>
-          <input
-            type="text"
-            className="form-control"
-            id="osm"
-            name="osm"
-            value={this.props.osm}
             onChange={this.props.handleChange}
           />
         </div>

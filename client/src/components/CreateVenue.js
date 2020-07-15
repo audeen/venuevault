@@ -7,6 +7,7 @@ import Stage from "./create/Stage";
 import Tech from "./create/Tech";
 import Power from "./create/Power";
 import NavbarCreate from "./navigation/NavbarCreate";
+import { Container } from "react-bootstrap";
 
 export default class CreateVenue extends Component {
   constructor(props) {
@@ -136,57 +137,58 @@ export default class CreateVenue extends Component {
     return (
       <div>
         <NavbarCreate />
+        <Container className="mt-5 pt-3">
+          <form onSubmit={this.onSubmit}>
+            <Details
+              currentStep={this.state.currentStep}
+              handleChange={this.handleChange}
+              venueName={this.state.venueName}
+              venueStreet={this.state.venueStreet}
+              venuePostal={this.state.venuePostal}
+              venueCity={this.state.venueCity}
+            />
 
-        <form onSubmit={this.onSubmit}>
-          <Details
-            currentStep={this.state.currentStep}
-            handleChange={this.handleChange}
-            venueName={this.state.venueName}
-            venueStreet={this.state.venueStreet}
-            venuePostal={this.state.venuePostal}
-            venueCity={this.state.venueCity}
-          />
+            <Contact
+              currentStep={this.state.currentStep}
+              handleChange={this.handleChange}
+              contactPerson={this.state.contactPerson}
+              contactPhone={this.state.contactPhone}
+              contactMobile={this.state.contactMobile}
+              contactMail={this.state.contactMail}
+            />
+            <Logistics
+              currentStep={this.state.currentStep}
+              handleChange={this.handleChange}
+              contactPerson={this.state.contactPerson}
+              contactPhone={this.state.contactPhone}
+              contactMobile={this.state.contactMobile}
+              contactMail={this.state.contactMail}
+            />
+            <Stage
+              currentStep={this.state.currentStep}
+              handleChange={this.handleChange}
+              stageWidth={this.state.stageWidth}
+              stageDepth={this.state.stageDepth}
+              stageHeight={this.state.stageHeight}
+              stageLevel={this.state.stageLevel}
+            />
 
-          <Contact
-            currentStep={this.state.currentStep}
-            handleChange={this.handleChange}
-            contactPerson={this.state.contactPerson}
-            contactPhone={this.state.contactPhone}
-            contactMobile={this.state.contactMobile}
-            contactMail={this.state.contactMail}
-          />
-          <Logistics
-            currentStep={this.state.currentStep}
-            handleChange={this.handleChange}
-            contactPerson={this.state.contactPerson}
-            contactPhone={this.state.contactPhone}
-            contactMobile={this.state.contactMobile}
-            contactMail={this.state.contactMail}
-          />
-          <Stage
-            currentStep={this.state.currentStep}
-            handleChange={this.handleChange}
-            stageWidth={this.state.stageWidth}
-            stageDepth={this.state.stageDepth}
-            stageHeight={this.state.stageHeight}
-            stageLevel={this.state.stageLevel}
-          />
+            <Tech
+              currentStep={this.state.currentStep}
+              handleChange={this.handleChange}
+              availableTech={this.state.availableTech}
+            />
+            <Power
+              currentStep={this.state.currentStep}
+              handleChange={this.handleChange}
+              stageLeft={this.state.stageLeft}
+              StageRight={this.state.StageRight}
+            />
 
-          <Tech
-            currentStep={this.state.currentStep}
-            handleChange={this.handleChange}
-            availableTech={this.state.availableTech}
-          />
-          <Power
-            currentStep={this.state.currentStep}
-            handleChange={this.handleChange}
-            stageLeft={this.state.stageLeft}
-            StageRight={this.state.StageRight}
-          />
-
-          {this.previousButton}
-          {this.nextButton}
-        </form>
+            {this.previousButton}
+            {this.nextButton}
+          </form>
+        </Container>
       </div>
     );
   }

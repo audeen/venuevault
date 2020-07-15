@@ -6,7 +6,7 @@ export default class NavbarHome extends Component {
   render() {
     return (
       <React.Fragment>
-        <Navbar bg="dark" expand="lg">
+        <Navbar bg="dark" expand="lg" className="fixed-top">
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
